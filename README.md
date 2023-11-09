@@ -17,3 +17,8 @@ A docker environment for Project 1.
   ```bash
   ./start-interactive.sh
   ```
+5. Run bench:
+  ```bash
+  pushd bench/5xx.xxx_r/data
+  bash run_bench
+  ```
