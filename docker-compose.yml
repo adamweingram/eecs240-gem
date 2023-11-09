@@ -7,4 +7,5 @@ services:
       dockerfile: Dockerfile
     #image: gcr.io/gem5-test/ubuntu-20.04_all-dependencies:v22-1
     #volumes:
-    #  - ./gem5:/root/gem5
+    #  - ./gem5:/root/gem5:rw
+    #  - ./bench:/root/bench:rw
