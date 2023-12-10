@@ -3,3 +3,6 @@ gem5/
 
 # Rust build stuff
 experiments/target/
+
+# Nix stuff
+.direnv/
