@@ -22,3 +22,11 @@ A docker environment for Project 1.
   pushd bench/5xx.xxx_r/data
   bash run_bench
   ```
+
+## To Run Spectre Experiment
+1. Build the project, just as before.
+2. Run the following command instead of the experiments
+  ```bash
+  /root/gem5/build/X86/gem5.opt -d /root/SpectrePoC/sim_output /root/gem5/configs/example/se.py --cmd /root/SpectrePoC/spectre.out --cpu-type=O3CPU --caches --l2cache --l1d_size=32kB --l1i_size=32kB --l2_size=512kB --l1d_assoc=4 --l1i_assoc=4 --l2_assoc=1 --cacheline_size=64
+  ```
+  (Note that you can use `--maxinsts 1000000000`, if you really want)
