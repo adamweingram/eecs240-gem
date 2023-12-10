@@ -10,3 +10,4 @@ services:
       - ./gem5:/root/gem5:rw
       - ./bench:/root/bench:rw
       - ./experiments:/root/experiments:rw
+      - ./SpectrePoC:/root/SpectrePoC:rw

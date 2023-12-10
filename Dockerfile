@@ -35,6 +35,13 @@ WORKDIR /root
 COPY ./bench.tar.bz2 /root
 RUN tar -xvjf bench.tar.bz2
 
+# Download and Build the Spectre PoC data
+WORKDIR /root
+# RUN git clone https://github.com/crozone/SpectrePoC.git SpectrePoC
+COPY ./SpectrePoC /root/SpectrePoC
+RUN make -C /root/SpectrePoC clean && make -C /root/SpectrePoC -j
+WORKDIR /root
+
 # Install other utilities
 RUN apt-get install -y sqlite
 
